@@ -1,0 +1,255 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #141414;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #e50914;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e50914;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #e50914;
+}
+
+.sign-in,
+.sign-up {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-in {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.sign-in:hover {
+  background-color: white;
+  color: #e50914;
+}
+
+.sign-up {
+  background-color: #e50914;
+  color: white;
+}
+
+.sign-up:hover {
+  background-color: white;
+  color: #e50914;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background-image: url('https://files.oaiusercontent.com/file-9wfbTtV282X4ykbqghwSZQ?se=2024-12-29T15%3A55%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D039483d5-a72a-477b-acbd-00f3d21f3302.webp&sig=qw4cRpaqdu5Trs3TzXdL8oNTGzxyy/bPQF%2BBkgHM25g%3D'); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-top: 400px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .cta {
+  background-color: #e50914;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .cta:hover {
+  background-color: #b20710;
+}
+
+/* Content Section */
+.content {
+  padding: 0px 0px;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 1px; /* Add spacing between cards */
+  overflow-x: auto; /* Allow horizontal scrolling for overflow */
+  padding: 1px;
+}
+
+.grid::-webkit-scrollbar {
+  height: 1px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background-color: #e50914;
+  border-radius: 4px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+.grid .card {
+  background-color: #333;
+  width: 300px; 
+  height: 426px; 
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  text-align: center;
+  border-radius: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+}
+
+/* Authentication Pages */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.auth-box {
+  background-color: #222;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-box h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.auth-button {
+  width: 100%;
+  background-color: #e50914;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #b20710;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  color: #ccc;
+}
